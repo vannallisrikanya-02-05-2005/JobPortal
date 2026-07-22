@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Apply Job</title>
+</head>
+<body>
+
+<h2>Apply for {{ job.title }}</h2>
+
+<form method="post">
+    {% csrf_token %}
+
+    <label>Name</label><br>
+    <input type="text" name="name"><br><br>
+
+    <label>Email</label><br>
+    <input type="email" name="email"><br><br>
+
+    <button type="submit">Submit Application</button>
+</form>
+
+<br>
+<a href="/">Back to Home</a>
+
+</body>
+</html>

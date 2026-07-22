@@ -1,0 +1,25 @@
+{% for job in jobs %}
+
+<div class="job-card">
+
+    <h2>{{ job.title }}</h2>
+
+    <p><b>Description:</b> {{ job.description }}</p>
+
+    <p><b>Location:</b> {{ job.location }}</p>
+
+    <p><b>Company:</b> {{ job.company }}</p>
+
+    <p><b>Salary:</b> {{ job.salary }}</p>
+
+    <a href="{% url 'apply' job.id %}">
+        <button class="apply-btn">Apply Now</button>
+    </a>
+
+</div>
+
+{% empty %}
+
+<h2>No Jobs Available</h2>
+
+{% endfor %}
